@@ -2,4 +2,3 @@
 .phpunit.cache
 composer.lock
 vendor
-phpunit.xml
