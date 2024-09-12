@@ -8,6 +8,7 @@
 - Convert to the Bangla calendar (Bengali Era).
 - Supports custom dates and timezones.
 - Easy to use with a fluent API.
+- Helper functions for easy access to common operations.
 
 ## Installation
 
@@ -109,6 +110,29 @@ Formats the date and time using a specified format, with the output in the Bangl
 Converts and formats the date and time into the Bangla calendar and Bangla numbers.
 
 - **`$format`**: The format string (same as PHP's `DateTime::format`).
+
+
+## Helper Functions
+
+**BanglaDateTime** provides the following global helper functions for easy access:
+
+- **`bangla_date_time($time = 'now', $timezone = 'UTC')`**: Creates a new `BanglaDateTime` instance.
+
+    ```php
+    $date = bangla_date_time('2023-04-13', 'Asia/Dhaka');
+    ```
+
+- **`format_bangla_date($format, $time = 'now', $timezone = 'UTC')`**: Formats a date/time in Bangla format.
+
+    ```php
+    echo format_bangla_date('l jS F Y h:i:s');
+    ```
+
+- **`convert_to_bangla_calendar($format, $time = 'now', $timezone = 'UTC)`**: Converts a date/time to Bangla calendar format.
+
+    ```php
+    echo convert_to_bangla_calendar('l jS F Y h:i:s');
+    ```
 
 ## Contributing
 
